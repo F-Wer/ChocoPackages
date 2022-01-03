@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Read this before creating packages: https://docs.chocolatey.org/en-us/create/create-packages -->
-<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://community.chocolatey.org/packages). -->
+<!-- Read this before creating packages: https://chocolatey.org/docs/create-packages -->
+<!-- It is especially important to read the above link to understand additional requirements when publishing packages to the community feed aka dot org (https://chocolatey.org/packages). -->
 
 <!-- Test your packages in a test environment: https://github.com/chocolatey/chocolatey-test-environment -->
 
@@ -8,8 +8,8 @@
 This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Reference. Chocolatey uses a special version of NuGet.Core that allows us to do more than was initially possible. As such there are certain things to be aware of:
 
 * the package xmlns schema url may cause issues with nuget.exe
-* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces
-* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements
+* Any of the following elements can ONLY be used by choco tools - projectSourceUrl, docsUrl, mailingListUrl, bugTrackerUrl, packageSourceUrl, provides, conflicts, replaces 
+* nuget.exe can still install packages with those elements but they are ignored. Any authoring tools or commands will error on those elements 
 -->
 
 <!-- You can embed software files directly into packages, as long as you are not bound by distribution rights. -->
@@ -22,40 +22,51 @@ This is a nuspec. It mostly adheres to https://docs.nuget.org/create/Nuspec-Refe
     <!-- This section is about this package, although id and version have ties back to the software -->
     <!-- id is lowercase and if you want a good separator for words, use '-', not '.'. Dots are only acceptable as suffixes for certain types of packages, e.g. .install, .portable, .extension, .template -->
     <!-- If the software is cross-platform, attempt to use the same id as the debian/rpm package(s) if possible. -->
-    <id>HTTP_Toolkit</id>
+    <id>lghub</id>
     <!-- version should MATCH as closely as possible with the underlying software -->
     <!-- Is the version a prerelease of a version? https://docs.nuget.org/create/versioning#creating-prerelease-packages -->
     <!-- Note that unstable versions like 0.0.1 can be considered a released version, but it's possible that one can release a 0.0.1-beta before you release a 0.0.1 version. If the version number is final, that is considered a released version and not a prerelease. -->
-    <version>1.51.0.20220103</version>
-    <packageSourceUrl>https://github.com/F-Wer/ChocoPackages/tree/master/HTTP_Toolkit</packageSourceUrl>
+    <version>2021.13.2906.20220103</version>
+    <packageSourceUrl>https://github.com/F-Wer/ChocoPackages/tree/master/lghub</packageSourceUrl>
     <!-- owners is a poor name for maintainers of the package. It sticks around by this name for compatibility reasons. It basically means you. -->
     <owners>F-Wer</owners>
     <!-- ============================== -->
 
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <!-- This section is about the software itself -->
-    <title>HTTP Toolkit</title>
-    <authors>Tim Perry</authors>
+    <title>lghub (Install)</title>
+    <authors>Logitech Inc.</authors>
     <!-- projectUrl is required for the community feed -->
-    <projectUrl>https://httptoolkit.tech/</projectUrl>
-    <!-- There are a number of CDN Services that can be used for hosting the Icon for a package. More information can be found here: https://docs.chocolatey.org/en-us/create/create-packages#package-icon-guidelines -->
-    <!-- Here is an example using Githack -->
-    <iconUrl>https://cdn.jsdelivr.net/gh/F-Wer/ChocoPackages/HTTP_Toolkit/Icons/HTTPTOOLKIT.png</iconUrl>
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <projectUrl>https://www.logitechg.com/en-us/innovation/g-hub.html/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/F-Wer/ChocoPackages/lghub/icons/lghub.png</iconUrl>
+    <copyright>© 2021 Logitech</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-  <licenseUrl>https://httptoolkit.tech/terms-of-service/</licenseUrl>
+    <!-- <licenseUrl></licenseUrl> -->
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/httptoolkit/httptoolkit</projectSourceUrl>
-    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<projectSourceUrl></projectSourceUrl>-->
+    <!--<docsUrl></docsUrl>-->
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>http toolkit http intercept https</tags>
-    <summary>HTTP Toolkit</summary>
-    <description>Intercept and view all your HTTP(S)
-Mock endpoints or entire servers
-Rewrite, redirect, or inject errors </description>
-    <!-- <releaseNotes>https://github.com/httptoolkit/httptoolkit-desktop/releases/tag/v1.5.1</releaseNotes> -->
-    <!-- =============================== -->
+    <tags>lghub logitech ghub hub mouse keyboard headset driver utility gaming</tags>
+    <summary>Logitech G HUB gives you a single portal for optimizing and customizing all your supported Logitech G gear: mice, keyboards, headsets, speakers, and webcams.</summary>
+    <description><![CDATA[### [lghub](https://chocolatey.org/packages/lghub)
+
+G HUB recognizes your supported Logitech G gear, and gives you full access to their customization features. It automatically keeps firmware up to date.
+
+## CONFIGURE. SHARE. WIN.
+
+Download profiles from your fellow players, gaming pros and popular streamers. It’s an easy way to try new mouse, keybind, and macros to enhance your game.
+
+## CONTROL YOUR STREAM
+
+Program buttons with in-app actions and create your own macros to launch media and switch scenes. Use your gaming gear to take command of OBS Studio for a faster and more seamless stream.
+
+## COLORIZE AND SYNC YOUR GEAR
+
+Choose from numerous animation effects, download lighting profiles from the community, and create your own advanced effects with Logitech G LIGHTSYNC for keyboards, mice, headsets, and speakers.
+]]></description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->      
 
     <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
     <!--<dependencies>
@@ -66,7 +77,7 @@ Rewrite, redirect, or inject errors </description>
       <dependency id="" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>-->
-    <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension
+    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
          - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
          - You want to use Get-PackageParameters and on less than 0.11.0
          - You want to take advantage of other functions in the core community maintainer's team extension package
