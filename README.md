@@ -1,7 +1,7 @@
 
 # Chocolatey Packages
 [![](https://ci.appveyor.com/api/projects/status/github/F-Wer/chocolatey-packages?svg=true)](https://ci.appveyor.com/project/F-Wer/chocolatey-packages)
-[Update status](https://gist.github.com/F-Wer/2a1deee335c4eda290e493a72839f6b5)
+[Update status](https://gist.github.com/F-Wer/73630a76805feb09fa5df27758acb1c2)
 [![](http://transparent-favicon.info/favicon.ico)](#)
 [chocolatey/F-Wer](https://chocolatey.org/profiles/F-Wer)
 
